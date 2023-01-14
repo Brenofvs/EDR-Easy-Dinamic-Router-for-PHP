@@ -111,7 +111,7 @@ As you can see, it's a very simple class, it will take care of the routes to any
 # EDR - Easy Dynamic Router PHP - Português
 *README in English just above*
 
-Em primeiro lugar, obrigado por visitar aqui! Espero que isso possa ajudá-lo :)
+Em primeiro lugar, obrigado por visitar este repositório! Espero poder ajudá-lo :)
 
 O que é o EDR? Bem, esta é uma classe PHP criada por mim [Brenofvs](https://www.github.com/Brenofvs "Brenofvs GitHub page") para facilitar as rotas. Enquanto aprendia PHP com MVC, encontrei um grande problema para lidar, Rotas.
 
