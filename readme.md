@@ -37,6 +37,41 @@ Both modules identify what is written after the "/" and rewrite it as "?url=$1",
 
 So all we need to do is get the value of "?url" to know which page is being requested, now let's look at the `Router.php` class.
 
+```PHP
+<?php
+
+namespace Source\Helpers;
+
+/**
+ * Brenofvs | Class Router
+ *
+ * @author Brenofvs <github.com/Brenofvs>
+ * @package Source\Helpers
+ */
+class Router
+{
+
+    private $url;
+    private $dir = "./pages/";
+    private $ext = ".php";
+
+    public function __construct()
+    {
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+        $this->url = $url;
+    }
+
+    public function loadPage()
+    {
+        if (file_exists($this->dir . $this->url . $this->ext)) {
+            include $this->dir . $this->url . $this->ext;
+        } else {
+            include "./pages/404.php";
+        }
+    }
+}
+```
+
 This class has three variables, `$url`, `$dir` and `$ext`.
 
 `$url`: Will have the value returned by `$_GET['url']`.
@@ -111,6 +146,41 @@ O segundo `IfModule` faz com que todos os links sejam redirecionados para o inde
 Ambos os módulos identificam o que está escrito depois do "/" e reescrevem como "?url=$1", e neste exemplo você pode ver o resultado: "www.site.com/contact" será igual a "www.site. com/index.php?url=contato"
 
 Então, tudo o que precisamos fazer é obter o valor de "?url" para saber qual página está sendo solicitada, agora vamos ver a classe `Router.php`.
+
+```PHP
+<?php
+
+namespace Source\Helpers;
+
+/**
+ * Brenofvs | Class Router
+ *
+ * @author Brenofvs <github.com/Brenofvs>
+ * @package Source\Helpers
+ */
+class Router
+{
+
+    private $url;
+    private $dir = "./pages/";
+    private $ext = ".php";
+
+    public function __construct()
+    {
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+        $this->url = $url;
+    }
+
+    public function loadPage()
+    {
+        if (file_exists($this->dir . $this->url . $this->ext)) {
+            include $this->dir . $this->url . $this->ext;
+        } else {
+            include "./pages/404.php";
+        }
+    }
+}
+```
 
 Esta classe possui três variáveis, `$url`, `$dir` e `$ext`.
 
