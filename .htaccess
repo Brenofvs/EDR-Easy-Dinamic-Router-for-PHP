@@ -1,0 +1,27 @@
+RewriteEngine On
+
+# don't change anything if you don't know what are you doing.
+# não altere nada a não ser que saiba o que está fazendo.
+
+# WWW Redirect by Brenofvs (Delete the "#" below to activate)
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# HTTPS Redirect by Brenofvs (Delete the "#" below to activate)
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# URL Admin Rewrite by Brenofvs
+<IfModule mod_rewrite.c>
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^admin/([0-9A-z_-]+)$ admin/index.php?url=$1 [QSA,L,NC]
+</IfModule>
+
+# URL Rewrite by Brenofvs
+<IfModule mod_rewrite.c>
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L,NC]
+</IfModule>

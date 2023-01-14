@@ -1,0 +1,21 @@
+{
+    "name": "brenofvs/fsphp",
+    "description": "Full Stack PHP Developer",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Breno Fernando V. Da Silva",
+            "email": "brenofvs.consultoria@gmail.com",
+            "homepage": "https://github.com/brenofvs",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-lib": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        }
+    }
+}
