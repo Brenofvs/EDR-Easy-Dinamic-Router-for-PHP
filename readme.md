@@ -102,7 +102,7 @@ $router->loadPage();
 
 In the above code we are requesting the autoload which was downloaded through composer and is in the "./vendor/autoload.php" folder and we are using the class through the "Source\Helpers\Router" namespace.
 
-Right below we have a ´<h1>´ tag just to identify which index we are in (we also have the index.php from the admin panel) and right after that we already have the class being used through the "new" operator and having its loadPage function already loading the "home" page as it is defined by default.
+Right below we have a ´h1´ tag just to identify which index we are in (we also have the index.php from the admin panel) and right after that we already have the class being used through the "new" operator and having its loadPage function already loading the "home" page as it is defined by default.
 
 So to test it, just change the link by adding a "/" at the end of it and a name for the page you want to request, for example "http://localhost/PHPRouter/teste" and the page "./pages/teste.php" will automatically be loaded, but if the file does not exist in that directory, the page "./pages/404.php" will be loaded.
 
@@ -212,7 +212,7 @@ $router->loadPage();
 
 No código acima estamos solicitando o autoload que foi baixado através do composer e está na pasta "./vendor/autoload.php" e estamos utilizando a classe através do namespace "Source\Helpers\Router".
 
-Logo abaixo temos uma tag ´<h1>´ apenas para identificar em qual index estamos (temos também o index.php do painel de administração) e logo em seguida já temos a classe sendo utilizada através do operador "new" e tendo sua função loadPage já carregando a página "home" como é definido por padrão.
+Logo abaixo temos uma tag ´h1´ apenas para identificar em qual index estamos (temos também o index.php do painel de administração) e logo em seguida já temos a classe sendo utilizada através do operador "new" e tendo sua função loadPage já carregando a página "home" como é definido por padrão.
 
 Então, para testar, basta alterar o link adicionando um "/" no final dele e um nome para a página que deseja solicitar, por exemplo "http://localhost/PHPRouter/teste" e a página "./pages/teste.php" será carregada automaticamente, mas se o arquivo não existir nesse diretório, a página "./pages/404.php" será carregada.
 
